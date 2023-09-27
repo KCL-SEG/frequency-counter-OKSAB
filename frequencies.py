@@ -16,3 +16,7 @@ def frequencies(items):
             frequencies.update({str(item) : count}) 
     return frequencies
 
+lst = ['a', 'a', 'b', 'b', 'b', 'c']
+lst2 = [100, 'Hello', '100', '100', 100]
+print(frequencies(lst))
+print(frequencies(lst2))
