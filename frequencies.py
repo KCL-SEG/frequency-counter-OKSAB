@@ -5,15 +5,15 @@ def frequencies(items):
     frequencies = {}
     # Your code goes here
     count = 0
-    for item in items:
-        item_to_string = str(item)
+    for item in items: # Iterating throught the items
+        item_to_string = str(item) # Convert items to string
 
-        if item_to_string in frequencies:
-            count += 1
-            frequencies.update({str(item) : count})
+        if item_to_string in frequencies.keys(): # If the item appears more the once the count is increased by 1
+            frequencies[item_to_string] += 1 
         else:
-            count = 1
-            frequencies.update({str(item) : count}) 
+            frequencies[item_to_string] = 1 # If the item is only found once 1 will be the count
     return frequencies
 
-print(frequencies(items=['a', 'a', 'b', 'b', 'b', 'c']))
+
+
+
